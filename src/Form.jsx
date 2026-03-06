@@ -23,7 +23,7 @@ function Form() {
         e.preventDefault();
         try {
             const response = await axios.post(
-                'http://localhost:5000/user',
+                'https://backend-azure-mu-86.vercel.app/user',
                 formData
             );
             console.log("form data:", formData);
@@ -46,7 +46,7 @@ function Form() {
     const fetchUsers = async () => {
         try {
             const response = await axios.get(
-                'http://localhost:5000/user'
+                'https://backend-azure-mu-86.vercel.app/user'
             );
             setUsers(response.data.users || []);
             console.log("Fetched users:", response.data);
